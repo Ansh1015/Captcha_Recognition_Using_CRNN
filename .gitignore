@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Dataset images (extracted at runtime from the bundled zip)
+Captcha_Recognition_using_CRNN/captcha_images_v2/
+
+# Tool / IDE artifacts
+.gstack/
+graphify-out/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime state
+saved_model/progress.json
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db

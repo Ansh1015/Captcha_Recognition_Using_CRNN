@@ -1,0 +1,117 @@
+/* ── Light theme overrides ───────────────────────────────────────────────── */
+
+/* Core backgrounds */
+html, body,
+.stApp, [data-testid="stAppViewContainer"],
+[data-testid="stMain"], section.main,
+[data-testid="stHeader"], .stAppHeader {
+    background-color: #f5f4f0 !important;
+    color: #1a1a1a !important;
+}
+[data-testid="stSidebar"] {
+    background: #eeede9 !important;
+    border-right: 1px solid rgba(200,169,124,0.15) !important;
+}
+
+/* Fix Streamlit emotion-cache text-color propagation */
+[data-testid="stVerticalBlock"],
+[data-testid="stHorizontalBlock"],
+[data-testid="stMarkdownContainer"],
+[data-testid="stElementContainer"],
+[data-testid="column"],
+[data-testid="stSidebarContent"],
+[data-testid="stMainBlockContainer"] {
+    color: #1a1a1a !important;
+}
+
+/* Custom design elements */
+.hero           { background: #f0ede5 !important; border-bottom: 1px solid rgba(200,169,124,0.2) !important; }
+.hero::before   { background: radial-gradient(circle, rgba(200,169,124,0.1) 0%, transparent 65%) !important; }
+.hero-title     { color: #1a1a1a !important; }
+.hero-sub       { color: #7a7068 !important; }
+.hero-eyebrow   { color: #c8a97c !important; }
+.marquee-wrap   { background: #c8a97c !important; }
+.marquee-track span { color: #f5f4f0 !important; }
+.surface        { background: #eceae3 !important; border-color: rgba(100,90,75,0.2) !important; }
+.step-title     { color: #1a1a1a !important; }
+.step-body      { color: #7a7068 !important; }
+.sec-title      { color: #7a7068 !important; }
+.stat-box,
+.stat-box-full  { background: #eceae3 !important; border-color: rgba(100,90,75,0.2) !important; }
+.pred-big       { background: #eceae3 !important; border-color: rgba(200,169,124,0.25) !important; }
+.logo-name      { color: #1a1a1a !important; }
+.logo-sub       { color: #7a7068 !important; }
+.empty-state    { background: rgba(0,0,0,0.03) !important; border-color: rgba(100,90,75,0.2) !important; }
+.empty-txt      { color: #7a7068 !important; }
+thead th        { background: rgba(0,0,0,0.04) !important; color: #7a7068 !important; }
+tbody td        { color: #3d3530 !important; }
+tbody tr:hover td { background: rgba(0,0,0,0.03) !important; color: #1a1a1a !important; }
+
+/* Streamlit widgets */
+[data-testid="metric-container"] {
+    background: #eceae3 !important;
+    border-color: rgba(100,90,75,0.25) !important;
+    color: #1a1a1a !important;
+}
+[data-testid="stMetricLabel"]  { color: #7a7068 !important; }
+[data-testid="stTab"]          { color: #7a7068 !important; }
+[data-testid="stExpander"]     { background: #eceae3 !important; border-color: rgba(100,90,75,0.2) !important; }
+[data-testid="stFileUploaderDropzone"],
+[data-testid="stFileUploader"] > div {
+    background: rgba(200,169,124,0.03) !important;
+    border-color: rgba(200,169,124,0.25) !important;
+}
+::-webkit-scrollbar-track      { background: #e8e5dc !important; }
+.sidebar-logo .logo-name       { color: #1a1a1a !important; }
+
+/* Dropdowns / select */
+[data-baseweb="select"] > div {
+    background-color: #eceae3 !important;
+    color: #1a1a1a !important;
+    border-color: rgba(100,90,75,0.3) !important;
+}
+[data-baseweb="select"] svg { fill: #3d3530 !important; }
+[data-baseweb="popover"]    { background-color: #eceae3 !important; }
+[data-testid="stSelectboxVirtualDropdown"] {
+    background-color: #eceae3 !important;
+    color: #1a1a1a !important;
+}
+[data-testid="stSelectboxVirtualDropdown"] li,
+[data-testid="stSelectboxVirtualDropdown"] [role="option"] {
+    background-color: #eceae3 !important;
+    color: #1a1a1a !important;
+}
+[data-testid="stSelectboxVirtualDropdown"] [role="option"]:hover,
+[data-testid="stSelectboxVirtualDropdown"] [aria-selected="true"] {
+    background-color: rgba(200,169,124,0.18) !important;
+    color: #1a1a1a !important;
+}
+
+/* Buttons */
+[data-testid="stBaseButton-secondary"] {
+    background: rgba(200,169,124,0.07) !important;
+    color: #3d3530 !important;
+    border: 1px solid rgba(100,90,75,0.25) !important;
+}
+[data-testid="stBaseButton-secondary"]:hover {
+    background: rgba(200,169,124,0.16) !important;
+    color: #1a1a1a !important;
+    border-color: rgba(200,169,124,0.45) !important;
+    box-shadow: none !important;
+}
+[data-testid="stBaseButton-secondary"]:focus,
+[data-testid="stBaseButton-secondary"]:active {
+    background: rgba(200,169,124,0.12) !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 0 0 2px rgba(200,169,124,0.35) !important;
+}
+
+/* Tooltips */
+[data-testid="stTooltipHoverTarget"] + div,
+div[role="tooltip"],
+.stTooltipContent,
+[data-testid="stTooltip"] {
+    background-color: #eceae3 !important;
+    color: #1a1a1a !important;
+    border: 1px solid rgba(100,90,75,0.2) !important;
+}
